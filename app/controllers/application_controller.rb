@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   
   def auth
     FbGraph::Auth.new($facebook[:id], $facebook[:secret])
-    # FbGraph::Application.new($facebook.id, :secret => $facebook.secret)
   end
 
   def current_user
@@ -20,11 +19,5 @@ class ApplicationController < ActionController::Base
       end
   end
   helper_method :current_user
-  
-  def require_user
-    if current_user.nil?
-      render :text => "You must be logged in to access this page..."
-    end
-  end
   
 end

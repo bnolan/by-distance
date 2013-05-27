@@ -51,7 +51,6 @@ Flights::Application.routes.draw do
   root :to => 'welcome#index'
   
   match 'results' => 'welcome#results', :as => :results
-  match 'authenticate' => 'welcome#authenticate', :as => :authenticate
   
   # See how all your routes lay out with "rake routes"
 

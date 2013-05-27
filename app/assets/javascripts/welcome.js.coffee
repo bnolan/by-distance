@@ -4,11 +4,7 @@
 
 class FacebookLogin
   constructor: ->
-    # FB.Event.subscribe 'auth.authResponseChange', (response) =>
-    #   alert(JSON.stringify(response)) # @onResponse
-      
     FB.login(@onResponse, { scope : "email,friends_hometown,friends_location" })
-    # ",friends_hometown,friends_location,hometown,location" })
     
   onResponse: (response) =>
     if (response.status == 'connected')
