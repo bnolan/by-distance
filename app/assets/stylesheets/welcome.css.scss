@@ -1,0 +1,48 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h4{
+  clear: both;
+
+  span.country{
+    font-weight: normal;
+    color: #333;
+    font-size: 0.85em;
+  }
+
+  span.description{
+    font-weight: normal;
+    color: #666;
+    font-size: 0.85em;
+  }
+
+  span.distance{
+    font-weight: normal;
+    color: #999;
+    font-size: 0.85em;
+  }
+}
+
+div.friends{
+  .friend{
+    float: left;
+    width: 100px;
+    height: 130px;
+    text-align: center;
+    
+    img{
+      width: 80px;
+      max-height: 100px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    
+    span{
+      display: block;
+      font-size: 0.85em;
+      color: #555;
+    }
+  }
+}

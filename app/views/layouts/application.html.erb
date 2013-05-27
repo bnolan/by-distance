@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flights</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script src='https://connect.facebook.net/en_US/all/debug.js'></script>
+  <script>
+    window.facebookAppUrl = <%= $facebook[:app_url].to_json.html_safe %>;
+  </script>
+</head>
+<body>
+
+<%= yield %>
+
+<script> 
+  FB.init({appId: "<%= $facebook[:id] %>", status: true, cookie: true});
+
+  $(function(){
+    FB.Canvas.setSize();
+  });
+</script>
+</body>
+</html>

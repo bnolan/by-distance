@@ -1,0 +1,24 @@
+<h1>
+  Friends by distance
+</h1>
+
+<% current_user.cities_by_distance.each do |city| %>
+  <h4>
+  	<%= image_tag icon_for_distance(city.distance), :class => 'transport' %>
+    <%= city.name %>
+    <span class="country"><%= city.country %></span>
+    <span class="description">distance</span>
+    <span class="distance"><%= travel_distance city.distance %></span>
+  </h4>
+
+  <div class="friends">
+    <% city.friends.slice(0,7).each do |friend| %>
+      <p class="friend">
+        <a href="<%= friend.profile_url %>">
+           <%= image_tag(friend.pic) %>
+          <span><%= friend.name %></span>
+        </a>
+      </p>
+    <% end %>
+  </div>
+<% end %>
